@@ -1,5 +1,5 @@
 import styles from "./Slide.module.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import SlideLists from "./SlideLists";
 
 import { kategoryObj, kategoryKeyArr } from "../Atom/NavigaionList";
