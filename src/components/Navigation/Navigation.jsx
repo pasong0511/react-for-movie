@@ -29,9 +29,12 @@ function Navigation() {
                 {kategoryKeyArr.map((key) => {
                     return (
                         <ul className={styles.navLists}>
-                            <li>
+                            <li className={styles.navList}>
                                 <span className={styles.navText}>
-                                    <Link to={`/page/${kategoryObj[key]}/1`}>
+                                    <Link
+                                        className={styles.navText}
+                                        to={`/page/${kategoryObj[key]}/1`}
+                                    >
                                         {key}
                                     </Link>
                                 </span>

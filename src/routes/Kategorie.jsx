@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieItem from "../components/Movie/MovieItem";
 import { Link } from "react-router-dom";
-import styles from "./Group.module.css";
+import styles from "./Kategorie.module.css";
 
 const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

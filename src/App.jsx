@@ -4,7 +4,7 @@ import { RecoilRoot } from "recoil";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 import Search from "./routes/Search";
-import Group from "./routes/Group";
+import Kategorie from "./routes/Kategorie";
 import Navigation from "./components/Navigation/Navigation";
 import ScrollToTop from "./components/Asset/ScrollToTop";
 import { Reset } from "styled-reset";
@@ -15,11 +15,14 @@ function App() {
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Reset />
                 <Navigation />
-                <ScrollToTop>백탑</ScrollToTop>
+                <ScrollToTop />
                 <Routes>
                     <Route path={`/`} element={<Home />} />
                     <Route path={`/movie/:id`} element={<Detail />} />
-                    <Route path={`/page/:group/:page`} element={<Group />} />
+                    <Route
+                        path={`/page/:group/:page`}
+                        element={<Kategorie />}
+                    />
                     <Route path={`/search/:search`} element={<Search />} />
                 </Routes>
             </BrowserRouter>
