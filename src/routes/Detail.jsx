@@ -1,7 +1,7 @@
 /*Detail.js*/
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MovieDetail from "../render/MovieDetail";
+import MovieDetail from "../components/Movie/MovieDetail";
 import styles from "./Detail.module.css";
 import Loading from "../components/Loading/Loading";
 

@@ -12,7 +12,6 @@ function MovieDetail({
 }) {
     return (
         <div className={styles.movie}>
-            {/* Background Img */}
             <div className={styles.background}>
                 <img
                     className={styles.Detail_bg}
@@ -20,20 +19,16 @@ function MovieDetail({
                     alt=""
                 />
             </div>
-            {/* ShortView (Img, Title, rating, runtime...) */}
             <div className={styles.show}>
                 <div className={styles.shortView}>
-                    {/* Img */}
                     <div className={styles.shortView_Img}>
                         <img src={coverImg} alt={title} />
                     </div>
-                    {/* title, rating, runtime, genre */}
                     <div className={styles.shortView_letters}>
                         <h3>{title}</h3>
                         <p>{rating ? `rating: ${rating} / 10` : null}</p>
                         <p>{runtime ? `runtime: ${runtime} (min)` : null}</p>
                         {genres ? (
-                            // genre is the 'array'
                             <div>
                                 <b>{"genres"}</b>
                                 <ul>
@@ -45,8 +40,6 @@ function MovieDetail({
                         ) : null}
                     </div>
                 </div>
-
-                {/* Description */}
                 {description_full ? (
                     <div className={styles.descript}>
                         <p>{description_full}</p>

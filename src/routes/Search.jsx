@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MovieItem from "../render/MovieItem";
+import MovieItem from "../components/Movie/MovieItem";
 import styles from "./Search.module.css";
 import Loading from "../components/Loading/Loading";
 
@@ -77,15 +77,9 @@ function Search() {
     console.log(movies);
 
     return (
-        <div
-            className={
-                search.toLowerCase() === "christmas"
-                    ? styles.Santacontainer
-                    : styles.container
-            }
-        >
+        <div className={styles.container}>
             {loading ? (
-                <></>
+                <Loading />
             ) : (
                 <div className={styles.movies}>
                     {movArr.map((movie) => (

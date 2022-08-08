@@ -13,7 +13,6 @@ function MovieItem({ id, coverImg, title, rating, runtime, year, summary }) {
     const onClick = (e) => {
         console.log("클릭");
         if (e.target.localName === "path") {
-            //북마크 아이콘 표시
             if (!saved) {
                 localStorage.setItem(id, true); //로컬 스토리지에 id와 true 상태 저장
             } else {
@@ -25,7 +24,6 @@ function MovieItem({ id, coverImg, title, rating, runtime, year, summary }) {
 
     return (
         <div className={styles.movie} onClick={onClick}>
-            {/* ShortView (Img, Title, rating, runtime...) */}
             <div className={styles.bookMark}>
                 <svg
                     className={`${styles.bookMarkIcon} ${

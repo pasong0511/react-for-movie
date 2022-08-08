@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MovieItem from "../render/MovieItem";
+import MovieItem from "../components/Movie/MovieItem";
 import { Link } from "react-router-dom";
 import styles from "./Group.module.css";
 

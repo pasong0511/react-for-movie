@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import CarouselBtn from "./CarouselBtn";
 
-import MovieItem from "../../render/MovieItem";
+import MovieItem from "../Movie/MovieItem";
 
 import styles from "./SlideLists.module.css";
 
