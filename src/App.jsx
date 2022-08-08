@@ -6,11 +6,13 @@ import Home from "./routes/Home";
 import Search from "./routes/Search";
 import Group from "./routes/Group";
 import Navigation from "./components/Navigation/Navigation";
+import { Reset } from "styled-reset";
 
 function App() {
     return (
         <RecoilRoot>
             <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <Reset />
                 <Navigation />
                 <Routes>
                     <Route path="/" element={<Home />} />
