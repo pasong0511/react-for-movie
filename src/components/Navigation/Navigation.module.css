@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(237, 239, 233);
+    background-color: #6255f6;
     z-index: 10;
 }
 
@@ -14,4 +14,90 @@
     position: relative;
     top: 20%;
     font-size: 20px;
+}
+
+.navLists {
+    width: 100%;
+    background-color: #fff;
+}
+
+.navList {
+    display: flex;
+    background-color: #fff;
+}
+
+.navText {
+    display: inline-block;
+    vertical-align: middle;
+    /* float: left; */
+    position: relative;
+    font-size: 14px;
+    font-weight: 900;
+    color: #6255f6;
+    line-height: 40px;
+    transition: 0.3s;
+    text-decoration: none;
+    -webkit-transition: 0.3s;
+}
+
+.navText:hover::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: 13px;
+    z-index: -1;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #74eb8b;
+}
+.navText:hover::after {
+    content: "";
+    position: absolute;
+    right: -13px;
+    bottom: 13px;
+    z-index: -1;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #74eb8b;
+}
+
+.searchBox {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding-right: 55px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.searchInput {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 15px;
+    color: #6255f6;
+    line-height: 50px;
+    text-indent: 25px;
+}
+
+.searchButton {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
 }

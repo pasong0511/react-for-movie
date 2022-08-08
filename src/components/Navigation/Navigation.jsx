@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { kategoryObj, kategoryKeyArr } from "../Atom/NavigaionList";
 import { useState } from "react";
-import { BiSearchAlt2 } from "react-icons/bi";
+import { IoSearchOutline } from "react-icons/io5";
 
 function Navigation() {
     const [search, setSearch] = useState("");
@@ -28,11 +28,13 @@ function Navigation() {
             <div>
                 {kategoryKeyArr.map((key) => {
                     return (
-                        <ul>
+                        <ul className={styles.navLists}>
                             <li>
-                                <Link to={`/page/${kategoryObj[key]}/1`}>
-                                    {key}
-                                </Link>
+                                <span className={styles.navText}>
+                                    <Link to={`/page/${kategoryObj[key]}/1`}>
+                                        {key}
+                                    </Link>
+                                </span>
                             </li>
                         </ul>
                     );
@@ -41,18 +43,21 @@ function Navigation() {
             <div>
                 <div>
                     <form>
-                        <input
-                            type="text"
-                            placeholder="영화 검색"
-                            value={search}
-                            onChange={onChange}
-                            onClick={onReset}
-                        ></input>
-                        <Link to={`/search/${search}`}>
-                            <button>
-                                <BiSearchAlt2></BiSearchAlt2>
-                            </button>
-                        </Link>
+                        <div className={styles.searchBox}>
+                            <input
+                                type="text"
+                                placeholder="영화 검색"
+                                value={search}
+                                onChange={onChange}
+                                onClick={onReset}
+                                className={styles.searchInput}
+                            ></input>
+                            <Link to={`/search/${search}`}>
+                                <IoSearchOutline
+                                    className={styles.searchButton}
+                                />
+                            </Link>
+                        </div>
                     </form>
                 </div>
             </div>

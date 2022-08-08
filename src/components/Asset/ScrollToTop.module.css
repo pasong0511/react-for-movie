@@ -1,0 +1,38 @@
+.ScrollToTop {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    border: rgba(98, 85, 246, 0.1) solid 1px;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #6255f6;
+}
+
+.ScrollToTop:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    margin-left: -4px;
+    border-top: currentColor solid 2px;
+    border-right: currentColor solid 2px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+.ScrollToTop:hover {
+    border-color: rgba(98, 85, 246, 1);
+    background-color: #6255f6;
+    color: #fff;
+    box-shadow: 0 20px 40px rgb(20 20 21 / 6%);
+}

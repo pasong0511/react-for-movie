@@ -6,6 +6,7 @@ import Home from "./routes/Home";
 import Search from "./routes/Search";
 import Group from "./routes/Group";
 import Navigation from "./components/Navigation/Navigation";
+import ScrollToTop from "./components/Asset/ScrollToTop";
 import { Reset } from "styled-reset";
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Reset />
                 <Navigation />
+                <ScrollToTop>백탑</ScrollToTop>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path={`/`} element={<Home />} />
                     <Route path={`/movie/:id`} element={<Detail />} />
                     <Route path={`/page/:group/:page`} element={<Group />} />
                     <Route path={`/search/:search`} element={<Search />} />
