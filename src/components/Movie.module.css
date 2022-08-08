@@ -11,11 +11,12 @@
     text-decoration: none;
     color: inherit;
     box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-        0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+        0 8px 16px -8px rgba(0, 0, 0, 0.3),
+        0 -6px 16px -6px rgba(0, 0, 0, 0.025);
     transition: all 0.4s ease;
 }
 
-.movie>* {
+.movie > * {
     color: #4b4453;
 }
 
@@ -32,7 +33,8 @@
     width: 100%;
     margin-right: 30px;
     box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-        0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+        0 18px 36px -18px rgba(0, 0, 0, 0.3),
+        0 -12px 36px -8px rgba(0, 0, 0, 0.025);
     transition: all 0.4s ease;
 }
 
@@ -67,4 +69,18 @@
 .movie__year {
     margin-right: 10px;
     font-size: 14px;
+}
+
+.bookMark {
+    position: absolute;
+    left: 80%;
+}
+
+.bookMarkIcon {
+    fill: #b2b2b2;
+    cursor: pointer;
+}
+
+.bookMarkIcon.isSave {
+    fill: palevioletred;
 }

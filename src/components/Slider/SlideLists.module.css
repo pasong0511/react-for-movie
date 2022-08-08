@@ -1,0 +1,52 @@
+.carouseContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    position: relative;
+}
+
+.carouselTitleGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 0px;
+    gap: 16px;
+
+    height: 36px;
+}
+
+.carouselTitleText {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--font-sm-size);
+    line-height: 24px;
+    color: var(--color-gray-80);
+}
+
+.carouseTitleDesc {
+    font-family: 'Noto Sans CJK KR';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--font-caption-size);
+    line-height: 22px;
+    color: var(--color-gray-40);
+}
+
+.carouselLists {
+    position: relative;
+    display: flex;
+    padding: 0px 52px
+}
+
+.carouselItem {
+    position: relative;
+    width: 230px;
+    height: 260px;
+}
+
+.carouselItem:not(:last-child) {
+    margin-right: 16px;
+}

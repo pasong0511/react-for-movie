@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
+import Search from "./routes/Search";
+import Group from "./routes/Group";
 import Navigation from "./components/Navigation/Navigation";
 
 function App() {
@@ -12,9 +14,9 @@ function App() {
                 <Navigation />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/movie/:id" element={<Detail />} />
-                    <Route path={`/page/:group/:page`} element={<Home />} />
-                    <Route path={`/search/:search`} element={<Home />} />
+                    <Route path={`/movie/:id`} element={<Detail />} />
+                    <Route path={`/page/:group/:page`} element={<Group />} />
+                    <Route path={`/search/:search`} element={<Search />} />
                 </Routes>
             </BrowserRouter>
         </RecoilRoot>

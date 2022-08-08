@@ -1,7 +1,9 @@
 import styles from "./Navigation.module.css";
 import { Link } from "react-router-dom";
+
 import { kategoryObj, kategoryKeyArr } from "../Atom/NavigaionList";
 import { useState } from "react";
+import { BiSearchAlt2 } from "react-icons/bi";
 
 function Navigation() {
     const [search, setSearch] = useState("");
@@ -35,9 +37,6 @@ function Navigation() {
                         </ul>
                     );
                 })}
-                <div className={styles.MerryChristMas}>
-                    <Link to={`/search/christmas`}>Christmas🎄</Link>
-                </div>
             </div>
             <div>
                 <div>
@@ -50,7 +49,9 @@ function Navigation() {
                             onClick={onReset}
                         ></input>
                         <Link to={`/search/${search}`}>
-                            <button>서치버튼</button>
+                            <button>
+                                <BiSearchAlt2></BiSearchAlt2>
+                            </button>
                         </Link>
                     </form>
                 </div>
