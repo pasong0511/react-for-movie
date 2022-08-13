@@ -30,7 +30,7 @@
 > -   React
 > -   Recoil
 
-## 🌐 News API
+## 🌐 API
 
 > -   [movie API](https://yts.mx)
 
