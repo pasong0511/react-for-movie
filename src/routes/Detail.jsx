@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieDetail from "../components/Movie/MovieDetail";
-import styles from "./Detail.module.css";
 import Loading from "../components/Loading/Loading";
 
 function Detail() {
@@ -26,7 +25,7 @@ function Detail() {
     });
 
     return (
-        <div className={styles.container}>
+        <div>
             {isLoading ? (
                 <Loading />
             ) : (

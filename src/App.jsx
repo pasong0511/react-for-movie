@@ -5,9 +5,11 @@ import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 import Search from "./routes/Search";
 import Kategorie from "./routes/Kategorie";
+import Save from "./routes/Save";
 import Navigation from "./components/Navigation/Navigation";
 import ScrollToTop from "./components/Asset/ScrollToTop";
 import { Reset } from "styled-reset";
+import "./App.css";
 
 function App() {
     return (
@@ -24,6 +26,7 @@ function App() {
                         element={<Kategorie />}
                     />
                     <Route path={`/search/:search`} element={<Search />} />
+                    <Route path={`/save/`} element={<Save />} />
                 </Routes>
             </BrowserRouter>
         </RecoilRoot>

@@ -1,79 +1,168 @@
-.movie {
-    color: rgb(32, 30, 30);
-    display: flex;
-    justify-content: center;
-    /* float: left; */
-}
-
-.Santamovie {
-    color: beige;
-    display: flex;
-    justify-content: center;
-}
-
-.show {
-    margin: 10px 10px;
-    width: 500px;
+.movieItemBig {
+    position: relative;
+    margin: 24px 10px;
+    width: 600px;
     height: 370px;
-    border: 2px solid snow;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
-.shortView {
+.movieContentBig {
+    margin-top: 10px;
+}
+
+.movieInfoBig {
     display: flex;
     flex-direction: row;
     padding: 10px;
 }
 
-.shortView_Img {
-    float: left;
-    width: 230px;
-    height: 345px;
-}
-
-.letters {
+.infoGroupBig {
+    padding-left: 20px;
     width: 250px;
     height: 350px;
-    padding-left: 20px;
-}
-
-.title {
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.letters h3,
-.letters p {
-    margin: 10px;
-}
-
-.letters li {
-    list-style-type: none;
-}
-
-.letters p {
-    word-break: break-all;
-    text-align: justify;
 }
 
 .summary {
-    width: 100%;
+    width: 200px;
     padding: 0 10px 10px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #aeaeba;
+    line-height: 24px;
+}
+
+/* 2222 */
+
+.movieItemShort {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.movieContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 10px;
+    width: 360px;
+    height: 430px;
+    border-radius: 10px;
+}
+
+.movieContent {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.infoImg img {
+    width: 280px;
+    height: 360px;
+    border-radius: 10px;
+}
+
+.infotitle a {
+    display: -webkit-box;
+    width: 100%;
+    padding: 0;
+    margin-top: 8px;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 500;
+    color: #64646b;
+    line-height: 25px;
+    letter-spacing: -0.3px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.infotitle.big a {
+    font-size: 20px;
+}
+
+.infoDesc {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 900;
+    color: #6255f6;
+    line-height: 40px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+.infoYear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 28px;
+    background-color: #fcde45;
+    border-radius: 24px;
+    margin: 10px;
+}
+
+.infoRating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 28px;
+    background-color: #74eb8b;
+    border-radius: 24px;
+    margin: 10px;
+}
+
+.runtime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 28px;
+    background-color: #35b7cf;
+    border-radius: 24px;
+    margin: 10px;
+}
+
+.tagLong {
+    width: 170px;
 }
 
 .bookMark {
-    /* position: absolute;
-    left: 80%; */
+    z-index: 10;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+}
+
+.movieItemBig .bookMark {
+    top: 40px;
+    left: 240px;
+}
+
+.bookMark svg {
+    width: 28px;
+    height: 28px;
 }
 
 .bookMarkIcon {
-    fill: #b2b2b2;
+    fill: #ffffff;
+    opacity: 0.7;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .bookMarkIcon.isSave {
-    fill: var(--color-primary);
+    opacity: 1;
+    fill: #f51294;
+    transition: 0.3s;
 }

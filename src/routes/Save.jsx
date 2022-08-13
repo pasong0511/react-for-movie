@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieItem from "../components/Movie/MovieItem";
-import Loading from "../components/Loading/Loading";
-import styles from "./Search.module.css";
+import { Link } from "react-router-dom";
+import styles from "./Kategorie.module.css";
 
-function Search() {
-    const { search } = useParams();
-    const [movies, setMovies] = useState([]);
+const List_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function Save() {
+    const { group, page } = useParams();
     const [loading, setLoading] = useState(true);
+    const [movies, setMovies] = useState([]);
 
-    const getMovies = () => {
-        for (let i = 1; i <= 100; i++) {
-            setLoading(true);
-            fetch(
-                `https://yts.mx/api/v2/list_movies.json?page=${i}&sort_by=rating`
+    const getMovies = async () => {
+        const json = await (
+            await fetch(
+                `https://yts.mx/api/v2/list_movies.json?page=${page}&${group}&sort_by=rating`
             )
-                .then((res) => res.json())
-                .then((json) => setMovies(json.data.movies));
-        }
+        ).json();
+        setMovies(json.data.movies);
         setLoading(false);
     };
 
@@ -25,14 +25,12 @@ function Search() {
         setLoading(true);
         getMovies();
         return;
-    }, [search]);
-
-    console.log(movies);
+    }, [group, page]);
 
     return (
         <div className={styles.container}>
             {loading ? (
-                <Loading />
+                <></>
             ) : (
                 <div className={styles.movies}>
                     {movies.map((movie) => (
@@ -45,13 +43,25 @@ function Search() {
                             runtime={movie.runtime}
                             summary={movie.summary}
                             year={movie.year}
-                            santa={search}
                         />
                     ))}
+                </div>
+            )}
+            {loading ? null : (
+                <div className={styles.footer}>
+                    <div className={styles.list}>
+                        {List_arr.map((lst) => {
+                            return (
+                                <Link key={lst} to={`/page/${group}/${lst}`}>
+                                    {lst}
+                                </Link>
+                            );
+                        })}
+                    </div>
                 </div>
             )}
         </div>
     );
 }
 
-export default Search;
+export default Save;

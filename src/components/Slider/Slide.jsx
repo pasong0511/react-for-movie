@@ -10,12 +10,20 @@ export default function Slide() {
         <div>
             {kategoryKeyArr.map((group) => {
                 return (
-                    <div className={styles.content}>
-                        <div className={styles.slideTitle}>
-                            <Link to={`/page/${group}`}>{group}</Link>
+                    <div
+                        key={kategoryObj[group]}
+                        className={styles.slideContent}
+                    >
+                        <div className={styles.slideTitleArea}>
+                            <Link
+                                className={styles.slideTitle}
+                                to={`/page/${group}/1`}
+                            >
+                                {group}
+                            </Link>
                         </div>
-                        <div className={styles.carouselArea}>
-                            <SlideLists kategory={kategoryObj[group]} />
+                        <div className={styles.slideListsArea}>
+                            <SlideLists kategorie={kategoryObj[group]} />
                         </div>
                     </div>
                 );

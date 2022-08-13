@@ -29,36 +29,43 @@
     padding: 10px 10px;
 }
 
-/* 230px 345px -> medium_cover_size */
-.shortView_Img {
+.infoImg img {
     float: left;
-    width: 230px;
-    height: 345px;
+    width: 280px;
+    height: 360px;
+    border-radius: 10px;
 }
 
 .shortView_letters {
-    width: 70%;
+    width: 50%;
     margin: 20px 0 0 30px;
-}
-
-.shortView_letters h3,
-.shortView_letters p,
-.shortView_letters div {
-    margin: 10px;
 }
 
 .shortView_letters li {
     list-style-type: none;
 }
 
-.descript {
+.infotitle {
     width: 100%;
-    padding: 0 10px 10px 10px;
+    padding: 0;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 25px;
+    word-break: keep-all;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
 }
 
-/* bg = background
-  fixed : background position is fixed
-  filter -> you can change the background */
+.descript {
+    width: 90%;
+    padding: 10px;
+}
+
 .Detail_bg {
     position: fixed;
     top: 0;
@@ -67,4 +74,60 @@
     min-width: 100%;
     min-height: 100%;
     filter: brightness(50%);
+}
+
+.infoYear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 28px;
+    border-radius: 24px;
+    margin: 10px;
+}
+
+.infoRating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 28px;
+    background-color: #74eb8b;
+    border-radius: 24px;
+    margin: 10px;
+}
+
+.runtime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 28px;
+    background-color: #35b7cf;
+    border-radius: 24px;
+    margin: 10px;
+}
+
+.infoGenreArea {
+    width: 100%;
+}
+
+.infoGenresList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.infoGenres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    height: 28px;
+    background-color: #d26586;
+    border-radius: 24px;
+    margin: 10px;
+    padding: 0 5px;
 }

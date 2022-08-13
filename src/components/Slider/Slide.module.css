@@ -1,13 +1,18 @@
-.content {
+.slideContent {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    height: 836px;
+    height: 600px;
     padding: 0px;
+    margin-top: 80px;
 }
 
-.carouselArea {
+.slideTitleArea {
+    margin: 0 auto;
+}
+
+.slideListsArea {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -26,4 +31,9 @@
     font-weight: 900;
     color: #74eb8b;
     line-height: 70px;
+    text-decoration: none;
+}
+
+.slideTitle:hover {
+    color: #6255f6;
 }

@@ -21,19 +21,30 @@ function MovieDetail({
             </div>
             <div className={styles.show}>
                 <div className={styles.shortView}>
-                    <div className={styles.shortView_Img}>
+                    <div className={styles.infoImg}>
                         <img src={coverImg} alt={title} />
                     </div>
                     <div className={styles.shortView_letters}>
-                        <h3>{title}</h3>
-                        <p>{rating ? `rating: ${rating} / 10` : null}</p>
-                        <p>{runtime ? `runtime: ${runtime} (min)` : null}</p>
+                        <h3 className={styles.infotitle}>{title}</h3>
+                        <b>{"rating"}</b>
+                        <span className={styles.infoRating}>
+                            {rating ? `${rating} / 10` : null}
+                        </span>
+                        <b>{"runtime"}</b>
+                        <span className={styles.runtime}>
+                            {runtime ? `${runtime} (min)` : null}
+                        </span>
                         {genres ? (
-                            <div>
+                            <div className={styles.infoGenreArea}>
                                 <b>{"genres"}</b>
-                                <ul>
+                                <ul className={styles.infoGenresList}>
                                     {genres.map((g) => (
-                                        <li key={g}>{g}</li>
+                                        <li
+                                            key={g}
+                                            className={styles.infoGenres}
+                                        >
+                                            {g}
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
@@ -42,7 +53,7 @@ function MovieDetail({
                 </div>
                 {description_full ? (
                     <div className={styles.descript}>
-                        <p>{description_full}</p>
+                        <span>{description_full}</span>
                     </div>
                 ) : null}
             </div>

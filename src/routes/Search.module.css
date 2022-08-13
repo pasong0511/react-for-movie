@@ -3,24 +3,6 @@
     padding-top: 30px;
 }
 
-.Santacontainer {
-    height: 100%;
-    padding-top: 30px;
-    color: antiquewhite;
-}
-
-.Santacontainer::after {
-    content: "";
-    opacity: 0.7;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: -1;
-    background-size: full;
-}
-
 .movies {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, auto));

@@ -7,9 +7,9 @@ import MovieItem from "../Movie/MovieItem";
 
 import styles from "./SlideLists.module.css";
 
-const ITEM_WIDTH = 500; // 아이템 너비-전역으로 값 지정
+const ITEM_WIDTH = 400; // 아이템 너비-전역으로 값 지정
 
-export default function SlideLists({ kategory }) {
+export default function SlideLists({ kategorie }) {
     const [items, setItems] = useState([]);
     const [maxCnt, setMaxCnt] = useState(0); // 화면에 최대로 보여질 개수
     const [startIdx, setStartIdx] = useState(0); // 슿라이드 시작 id
@@ -18,7 +18,7 @@ export default function SlideLists({ kategory }) {
         // console.log(`getMovie`)
         const json = await (
             await fetch(
-                `https://yts.mx/api/v2/list_movies.json?limit=100&${kategory}&sort_by=rating`
+                `https://yts.mx/api/v2/list_movies.json?limit=100&${kategorie}&sort_by=rating`
             )
         ).json();
         setItems(json.data.movies);
@@ -70,6 +70,7 @@ export default function SlideLists({ kategory }) {
             <ul className={styles.carouselLists}>
                 {currentItems.map((movie) => (
                     <MovieItem
+                        isShort={true}
                         key={movie.id}
                         id={movie.id}
                         title={movie.title}
@@ -84,9 +85,3 @@ export default function SlideLists({ kategory }) {
         </div>
     );
 }
-
-SlideLists.propTypes = {
-    name: PropTypes.string.isRequired,
-    desc: PropTypes.string.isRequired,
-    items: PropTypes.array.isRequired,
-};

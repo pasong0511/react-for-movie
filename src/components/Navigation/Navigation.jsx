@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { kategoryObj, kategoryKeyArr } from "../Atom/NavigaionList";
 import { useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
+import LogoImg from "./Img/movie-icon.png";
 
 function Navigation() {
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState(null);
 
     //입력창에 값 넣기
     const onChange = (event) => {
@@ -14,53 +15,52 @@ function Navigation() {
         console.log(search);
     };
 
-    //상태 초기화
-    const onReset = () => {
-        setSearch("");
-    };
-
     return (
         <div className={styles.navContainer}>
             <div className={styles.logo}>
-                <Link to={"/"}>오늘뭐볼까</Link>
+                <Link to={"/"}>
+                    <img
+                        src={LogoImg}
+                        alt="뭐볼래 로고"
+                        className={styles.logoImg}
+                    ></img>
+                </Link>
             </div>
 
-            <div>
+            <ul className={styles.navLists}>
                 {kategoryKeyArr.map((key) => {
                     return (
-                        <ul className={styles.navLists}>
-                            <li className={styles.navList}>
-                                <span className={styles.navText}>
-                                    <Link
-                                        className={styles.navText}
-                                        to={`/page/${kategoryObj[key]}/1`}
-                                    >
-                                        {key}
-                                    </Link>
-                                </span>
-                            </li>
-                        </ul>
+                        <li key={key} className={styles.navItem}>
+                            <Link
+                                className={styles.navText}
+                                to={`/page/${kategoryObj[key]}/1`}
+                            >
+                                {key}
+                            </Link>
+                        </li>
                     );
                 })}
-            </div>
-            <div>
-                <div>
+            </ul>
+            <div className={styles.searchArea}>
+                <div className={styles.searchBox}>
                     <form>
-                        <div className={styles.searchBox}>
-                            <input
-                                type="text"
-                                placeholder="영화 검색"
-                                value={search}
-                                onChange={onChange}
-                                onClick={onReset}
-                                className={styles.searchInput}
-                            ></input>
-                            <Link to={`/search/${search}`}>
+                        <input
+                            type="text"
+                            placeholder="영화 검색"
+                            value={search}
+                            onChange={onChange}
+                            onMouseOut={() => {
+                                setSearch("");
+                            }}
+                            className={styles.searchInput}
+                        ></input>
+                        <Link to={`/search/${search}`}>
+                            <button className={styles.Button}>
                                 <IoSearchOutline
                                     className={styles.searchButton}
                                 />
-                            </Link>
-                        </div>
+                            </button>
+                        </Link>
                     </form>
                 </div>
             </div>

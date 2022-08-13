@@ -8,13 +8,13 @@
     grid-template-columns: repeat(auto-fill, minmax(500px, auto));
 }
 
-.footer {
+.pagenation {
     display: flex;
     justify-content: center;
     height: 100px;
 }
 
-.list {
+.pageList {
     width: 40%;
     display: flex;
     flex-direction: row;
@@ -22,6 +22,16 @@
     align-items: center;
 }
 
-.list a {
-    font-size: 30px;
+.pageList a {
+    font-weight: 900;
+    color: #6255f6;
+    background: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: #dcdce6;
+    line-height: 60px;
+}
+
+.pageList a.isActive {
+    color: #6255f6;
 }
